@@ -1,4 +1,4 @@
-<x-main-layout>
+<x-main-layout t="Articoli">
     <h1 class="display-4 text-primary text-center m-5">I nostri articoli</h1>
 
     <div class="container">

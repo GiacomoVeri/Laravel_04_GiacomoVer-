@@ -1,4 +1,4 @@
-<x-main-layout>
+<x-main-layout t="Home">
     <h1 class="text-center m-5 text-primary">I nostri ultimi articoli</h1>
     <div class="container">
         <div class="row">

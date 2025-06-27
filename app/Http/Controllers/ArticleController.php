@@ -33,7 +33,7 @@ class ArticleController extends Controller
          'id' => 4,
          'title' => 'Sicurezza in PHP: best practices',
          'description' => 'Come scrivere codice PHP sicuro e prevenire le vulnerabilità comuni come SQL Injection e XSS.',
-        'image' => 'https://picsum.photos/400',
+         'image' => 'https://picsum.photos/400',
          'author' => 'Elisa Greco'
       ],
       [
@@ -98,7 +98,13 @@ class ArticleController extends Controller
    public function allArticles()
    {
       $articles = $this->articles;
-       
+
       return view('articles', compact('articles'));
+   }
+
+   public function show($id) 
+   {
+      $article = collect($this->articles)->firstWhere('id', $id);
+      return view('article-detail', compact('article'));
    }
 }

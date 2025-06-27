@@ -8,12 +8,11 @@ use Illuminate\View\Component;
 
 class MainLayout extends Component
 {
-    /**
-     * Create a new component instance.
-     */
-    public function __construct()
+    public $pageTitle;
+
+    public function __construct($t)
     {
-        
+        $this->pageTitle = $t;
     }
 
     /**
